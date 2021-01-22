@@ -1,28 +1,28 @@
+/*
+ * @Author: xu.yanyan
+ * @Date: 2021-01-21 14:26:53
+ * @LastEditors: xu.yanyan
+ * @LastEditTime: 2021-01-22 15:04:34
+ * @Description: file content
+ */
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import modulesRoutes from "@/modules/router.js";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: () => import("@/modules/home.vue")
   }
 ];
 
+// 模块的路由信息
+routes.push(...modulesRoutes);
+
 const router = new VueRouter({
-  mode: "history",
+  // mode: "history",
   base: process.env.BASE_URL,
   routes
 });

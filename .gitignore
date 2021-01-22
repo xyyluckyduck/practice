@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
+# 默认 build 的路径是 /dist
 /dist
+# 经过 vue.config.js 中的 outputDir 的修改，build 之后的路径为 my-project
+# 此处将该路径文件排斥 git 跟踪
+/my-project
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
