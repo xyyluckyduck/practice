@@ -1,4 +1,5 @@
 # my-project
+这是个人项目，用来进行项目配置以及功能开发的练习工程。
 
 ## Project setup
 ```
