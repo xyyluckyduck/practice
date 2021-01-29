@@ -2,7 +2,7 @@
  * @Author: xu.yanyan
  * @Date: 2021-01-22 11:03:14
  * @LastEditors: xu.yanyan
- * @LastEditTime: 2021-01-22 11:14:30
+ * @LastEditTime: 2021-01-27 09:20:07
  * @Description: file content,
  */
 module.exports = {
@@ -12,6 +12,7 @@ module.exports = {
   outputDir: process.env.VUE_APP_ID,
   // 所有 webpack-dev-server 的选项都支持
   devServer: {
+    hot: true, // 页面自动刷新
     open: true,
     port: 9999,
     proxy: {
