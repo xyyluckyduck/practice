@@ -2,21 +2,28 @@
  * @Author: xu.yanyan
  * @Date: 2021-01-22 13:57:23
  * @LastEditors: xu.yanyan
- * @LastEditTime: 2021-01-28 16:48:49
+ * @LastEditTime: 2021-03-01 13:50:45
  * @Description: file content
 -->
 <template>
   <div class="content">
-    <circle-loading></circle-loading>
+    <div>
+      <circle-loading />
+    </div>
+    <div>
+      <bubble-loading />
+    </div>
   </div>
 </template>
 
 <script>
+import BubbleLoading from "./component/bubble-loading.vue";
 import CircleLoading from "./component/circle-loading";
 
 export default {
   components: {
-    CircleLoading
+    CircleLoading,
+    BubbleLoading
   }
 };
 </script>
