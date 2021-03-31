@@ -2,7 +2,7 @@
  * @Author: xu.yanyan
  * @Date: 2021-01-22 11:19:40
  * @LastEditors: xu.yanyan
- * @LastEditTime: 2021-01-22 14:55:02
+ * @LastEditTime: 2021-01-28 16:49:33
  * @Description: 统一加载模块路由信息
  */
 
@@ -27,7 +27,6 @@ function registerRoute(route) {
 // keys 静态方法： 返回匹配成功模块的名字组成的数组
 modulesFiles.keys().forEach(modulePath => {
   const value = modulesFiles(modulePath);
-
   if (value.default instanceof Array) {
     value.default.forEach(registerRoute);
   } else {
